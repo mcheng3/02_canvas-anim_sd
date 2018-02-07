@@ -1,0 +1,20 @@
+var c = document.getElementById("area");
+var ctx = c.getContext("2d");
+ctx.fillStyle = "#99348d";
+var pos = 0;
+var m = 500;
+    
+
+var drawCircle = function(){
+    ctx.clear();
+    ctx.beginPath();
+    ctx.arc(250,m*(-1 * Math.abs(Math.sin(0.2*pos)))+450,50,0, 2*Math.PI);
+    m= m/1.02;
+    ctx.stroke();
+    ctx.fill();
+    pos+=0.5;
+    window.requestAnimationFrame(drawCircle);
+}
+
+window.requestAnimationFrame(drawCircle);
+
