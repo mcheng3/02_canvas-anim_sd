@@ -1,4 +1,5 @@
 var c = document.getElementById("area");
+var requestID;
 
 var cancel = function(){
     window.cancelAnimationFrame(requestID);
@@ -10,8 +11,6 @@ var animateCircle = function(){
     ctx.fillStyle = "#99348d";
     var pos = 0;
     var m = 250;
-
-    var requestID;
   
     var drawCircle = function(){
 	ctx.clearRect(0, 0, c.width, c.height);
@@ -35,10 +34,8 @@ var animateDVD = function(){
     ctx.fillStyle = "#99348d";
     var pos = 0;
     var m = 250;
-    var xVel = 2;
-    var yVel = 2;
-
-    var requestID;
+    var xVel = 105;
+    var yVel = 100;
    
     var drawDVD = function(){
 	ctx.clearRect(0, 0, c.width, c.height);
